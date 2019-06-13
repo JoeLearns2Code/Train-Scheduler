@@ -89,4 +89,20 @@ console.log(firstTrainTime);
 console.log(frequency);
 
 
+
+//Add a new row to the HTML table
+
+var newRow = $("<tr>").append(
+$("<td>").text(trainName),
+$("<td>").text(destination),
+$("<td>").text(frequency),
+$("<td>").text(),
+$("<td>").text(),
+
+);
+
+// Append the new row to the table body
+
+$("#schedule > tbody").append(newRow);
+
 });
