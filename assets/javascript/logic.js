@@ -22,6 +22,18 @@ var firebaseConfig = {
   var database = firebase.database();
   
   
+  //display current time via moment.js:
+
+  function displayCurrentTime() {
+    setInterval(function(){
+        $('#current-time').html(moment().format('HH:mm'))
+      }, 1000);
+    }
+    displayCurrentTime();
+
+
+
+
   //Button to submit new train information
 
   $("#submit-button").on("click", function(event) {
@@ -66,6 +78,7 @@ var firebaseConfig = {
    $("#frequency-input").val("");
 
   });
+
 
 
 
