@@ -57,6 +57,9 @@ var firebaseConfig = {
 
    };
    
+   //Push object to firebase
+
+   database.ref().push(newTrain);
    
    
    //log to console for coding/debugging 
@@ -109,8 +112,8 @@ var newRow = $("<tr>").append(
 $("<td>").text(trainName),
 $("<td>").text(destination),
 $("<td>").text(frequency),
-$("<td>").text(),
-$("<td>").text(),
+$("<td>").text("tbd"),
+$("<td>").text("tbd"),
 
 );
 
