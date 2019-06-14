@@ -32,6 +32,10 @@ var firebaseConfig = {
     displayCurrentTime();
 
 
+   
+
+   
+
 
 
   //Button to submit new train information
@@ -106,14 +110,42 @@ console.log(frequency);
 
 
 
+//Time calculation://
+
+//convert first train time entered 
+var firstTimeConverted = moment(firstTrainTime, "HH:mm").subtract(1, "years");
+  console.log(firstTimeConverted);
+
+
+//variable for currentTime
+var currentTime = moment();
+console.log("Current Time: " + moment(currentTime).format("hh:mm"));
+
+//difference between first train time and current time
+var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+console.log("Difference in Time: " +diffTime);
+
+//calculate time remaining until next train (modulus)
+var tRemain = diffTime % frequency;
+console.log(tRemain);
+
+//Minutes until train arrives
+var minutesUntilTrain = frequency - tRemain;
+console.log("Minutes until train " + minutesUntilTrain);
+
+//Next train arrival
+var nextTrain = moment().add(minutesUntilTrain, "minutes");
+console.log("Arrival Time: " + moment(nextTrain).format("HH:mm"));
+
+
 //Add a new row to the HTML table
 
 var newRow = $("<tr>").append(
 $("<td>").text(trainName),
 $("<td>").text(destination),
-$("<td>").text(frequency),
-$("<td>").text("tbd"),
-$("<td>").text("tbd"),
+$("<td>").text(frequency + " min"),
+$("<td>").text(moment(nextTrain).format("HH:mm")),
+$("<td>").text(minutesUntilTrain + " min"),
 
 );
 
@@ -122,3 +154,6 @@ $("<td>").text("tbd"),
 $("#schedule > tbody").append(newRow);
 
 });
+
+
+
