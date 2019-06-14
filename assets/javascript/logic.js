@@ -94,6 +94,8 @@ var firebaseConfig = {
 database.ref().on("child_added", function(childSnapshot){
  console.log(childSnapshot.val());
 
+
+
 //Store all inputs in variables to snapshot on firebase
 
 var trainName = childSnapshot.val().name;
@@ -112,7 +114,7 @@ console.log(frequency);
 
 //Time calculation://
 
-//convert first train time entered 
+//convert first train time entered to a year previous, to ensure it's not interpreted as coming after the current time.
 var firstTimeConverted = moment(firstTrainTime, "HH:mm").subtract(1, "years");
   console.log(firstTimeConverted);
 
@@ -135,7 +137,9 @@ console.log("Minutes until train " + minutesUntilTrain);
 
 //Next train arrival
 var nextTrain = moment().add(minutesUntilTrain, "minutes");
+
 console.log("Arrival Time: " + moment(nextTrain).format("HH:mm"));
+
 
 
 //Add a new row to the HTML table
@@ -152,6 +156,10 @@ $("<td>").text(minutesUntilTrain + " min"),
 // Append the new row to the table body
 
 $("#schedule > tbody").append(newRow);
+
+//refresh page to recalculate minutes until next train arrives
+
+setInterval("window.location.reload()", 60000);
 
 });
 
