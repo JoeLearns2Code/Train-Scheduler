@@ -1,0 +1,142 @@
+html {
+
+background: url("../images/train-background.jpg") no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
+
+}
+
+
+
+
+.wrapper {
+
+margin-right: auto;
+margin-left: auto;
+max-width: 95%;
+padding-right: 10px;
+padding-left: 10px;
+
+}
+
+
+.header {
+
+text-align: center;
+width: 100%;
+margin-bottom: 2em;
+background-color: lightskyblue;
+padding: 2px;
+
+}
+
+
+h1 {
+
+color: mediumblue;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+text-shadow: 1px 1px 1px #000, 
+               3px 3px 5px skyblue;
+
+}
+
+
+#current-time{
+
+font-size: 14pt;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+
+
+#schedule {
+
+width: 100%;
+border-style: solid;
+border-color: mediumblue;
+border-width: 3px;
+background: white;
+
+}
+
+h2 {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background-color: mediumblue;
+padding: 2px;
+color: white;
+width: 25.8%;
+
+}
+
+th {
+
+text-align: left;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+text-decoration: underline; 
+
+}
+
+td {
+
+padding: 2px;
+
+
+}
+
+
+#train-entry-box{
+
+    width: 25%;
+    border-style: solid;
+    border-color: mediumblue;
+    border-width: 3px;
+    background: white;
+    padding: 6px;
+
+
+
+
+
+}
+
+label {
+
+
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: bold;
+
+}
+
+input {
+
+border-color: mediumblue;
+padding: 2px;
+
+
+}
+
+
+#submit-button {
+
+margin-top: 8px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 14pt;
+background-color: mediumblue;
+color: white;
+border-radius: 10px;
+border-color: mediumblue;
+
+}
+
+#submit-button:hover{
+
+background-color: skyblue;
+color: white;
+
+
+}

@@ -21,18 +21,18 @@
     <div class="wrapper">
         <div class="header">
             <h1>Train Schedule</h1>
+            <div id="current-time"></div>
         </div>
         <div class="schedule-container">
-            <div id="current-time"></div>
             <table id="schedule">
                 <thead>
                     <h2>Current Train Schedule</h2>
                     <tr>
-                        <th>Train Name</th>
-                        <th>Destination</th>
-                        <th>Frequency (min)</th>
-                        <th>Next Arrival</th>
-                        <th>Minutes Away</th>
+                        <th>Train Name:</th>
+                        <th>Destination:</th>
+                        <th>Frequency (min):</th>
+                        <th>Next Arrival:</th>
+                        <th>Minutes Away:</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,6 +43,7 @@
 
         <form class="train-entry">
             <h2>Add Train</h2>
+            <div id=train-entry-box>
             <label>Train Name</label>
             <br>
             <input id="train-name-input" type="text" placeholder="name">
@@ -60,6 +61,7 @@
             <input id="frequency-input" type="text" placeholder="00">
             <br>
             <button id="submit-button">Submit</button>
+        </div>
         </form>
 
 
